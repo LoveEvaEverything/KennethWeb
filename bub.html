@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		body{
+			margin: 0;
+			height: 100%;
+		}
+
+		html{
+			height: 100%;
+		}
+
+		#title_id{
+			background: #1DDEFC;
+			height: 10%;
+		}
+
+	    #menu_id{
+			background: #1DFC25;
+			width: 10%;
+			height: 85%;
+			float: left;
+		}
+
+		#content_id{
+			background: #FC1D1D;
+			height: 85%;
+		}
+
+		#bottom_id{
+			background: #6B4A09;
+			height: 5%;
+		}
+
+		#title_text_id{
+			text-align: center;
+			font-size: 30px;
+			padding-top: 10px;
+			color: #72B0FF;
+			font-family: monospace;
+		}
+
+		#menu_item_id{
+			padding: 50px;
+			font-family: cursive;
+		}
+
+		#menu_item_id:hover{
+			background-color: black;
+			color: white;
+		}
+
+		iframe{
+			width: 90%;
+			height: 100%;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function setNews() {
+			document.getElementById('iframe_id').src = "new_news.html"
+		}
+
+		function setLife() {
+			document.getElementById('iframe_id').src = "new.html"
+		}
+
+		function setSchoolStory() {
+			document.getElementById('iframe_id').src = "news.html"
+		}
+
+		function setIntroduction() {
+			document.getElementById('iframe_id').src = "calculator.html"
+		}
+	</script>
+</head>
+<body>
+	<div id="title_id">
+		<div id="title_text_id"> Welcome to my personal website!</div>
+	</div>
+
+	<div id="menu_id">
+		<div id="menu_frame_id">
+			<b>
+				<div id="menu_item_id" onclick="setNews()">News</div>
+				<div id="menu_item_id" onclick="setLife()">My daily life</div>
+				<div id="menu_item_id" onclick="setSchoolStory()">My school story</div>
+				<div id="menu_item_id" onclick="setIntroduction()">Introduction</div>
+			</b>
+		</div>
+	</div>
+
+	<div id="content_id">
+		<iframe src="new.html" frameborder = 0 id="iframe_id"></iframe>
+	</div>
+
+	<div id="bottom_id">
+		<div id="bottom_id"></div>
+	</div>
+
+</body>
+</html>

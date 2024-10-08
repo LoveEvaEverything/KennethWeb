@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#login_frame_id{
+			background-color: #BAD9FF;
+			width: 600px;
+			height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -300px;
+            margin-top: -150px;
+            text-align: center;
+            background-image: url("earth.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+		}
+
+		#title_id{
+			padding-top: 20px;
+			font-size: 30px;
+			color: white;
+		}
+
+		#input_frame_id{
+			padding-top: 30px;
+		}
+		input{
+			margin-top: 20px;
+			font-size: 20px;
+		}
+
+		button{
+			margin-top: 50px;
+			width: 150px;
+			height: 25px;
+		}
+
+		#banner_id{
+			text-align: center;
+			background-color: grey;
+			position: absolute;
+			left: 50%;
+			width: 600px;
+			height: 50px;
+			margin-left: -300px;
+			margin-top: 250px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function login(){
+			var accountName = document.getElementById('account_id').value;
+			var passwordName = document.getElementById('password_id').value;
+
+			if(accountName == "Kenneth" && passwordName == "321"){
+
+				location.href = "bub.html";
+			}else{
+				var accountName = document.getElementById('account_id').value = "";
+				var passwordName = document.getElementById('password_id').value = "";
+				alert("Login failed");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div  id = "banner_id">BANNER</div>
+	<div id="login_frame_id">
+    	<div id="title_id">Login</div>
+
+	    <div id="input_frame_id">
+	    	<div><input type="" id="account_id" placeholder="Enter your account."></div>
+	    	<div><input type="password" id="password_id" placeholder="Enter your password."></div>
+	    </div>
+
+	    <button onclick="login()">LOGIN</button>
+	</div>
+
+</body>
+</html>
